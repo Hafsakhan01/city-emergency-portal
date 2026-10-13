@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #222;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ---------- Header ---------- */
+
+.site-header {
+    width: 100%;
+    background-color: #263238;
+    color: white;
+}
+
+.header-inner {
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-title h1 {
+    font-size: 1.7rem;
+}
+
+.site-title p {
+    font-size: 0.9rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* ---------- Alert Banner ---------- */
+
+.alert-banner {
+    width: 90%;
+    max-width: 75rem;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+
+    background-color: #fde8e8;
+    border-left: 0.4rem solid #c62828;
+    border-radius: 0.5rem;
+}
+
+.alert-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.08rem;
+}
+
+.alert-banner h2 {
+    margin: 0.4rem 0;
+    font-size: 1.8rem;
+}
+
+.alert-banner p:last-child {
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- Main Two-Column Layout ---------- */
+
+.page-layout {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto 3rem;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.main-content {
+    flex: 2;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* ---------- Content Cards ---------- */
+
+.content-card,
+.sidebar {
+    background-color: white;
+    padding: 1.5rem;
+    border: 0.06rem solid #dfe3e8;
+    border-radius: 0.6rem;
+}
+
+.content-card h2,
+.sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.notice-item {
+    padding: 1rem 0;
+    border-bottom: 0.06rem solid #e1e5e8;
+}
+
+.notice-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.notice-item h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+}
+
+.notice-item p,
+.content-card > p {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- Essential Services ---------- */
+
+.service-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.service-links a {
+    padding: 0.6rem 0.8rem;
+    background-color: #eceff1;
+    color: #263238;
+    border-radius: 0.35rem;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- Emergency Contacts ---------- */
+
+.contact-item {
+    padding: 0.9rem 0;
+    border-bottom: 0.06rem solid #e1e5e8;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-item p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #263238;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   MEDIA QUERY 1 - TABLET
+   Below 768px
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .page-layout {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .alert-banner {
+        width: 90%;
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERY 2 - MOBILE
+   Below 480px
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .header-inner {
+        width: 92%;
+        padding: 1rem 0;
+    }
+
+    .site-title h1 {
+        font-size: 1.35rem;
+    }
+
+    .site-title p {
+        font-size: 0.8rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+    }
+
+    .main-nav a {
+        font-size: 0.9rem;
+    }
+
+    .alert-banner {
+        width: 92%;
+        margin: 1rem auto;
+        padding: 1.1rem;
+    }
+
+    .alert-banner h2 {
+        font-size: 1.4rem;
+    }
+
+    .alert-banner p:last-child {
+        font-size: 0.9rem;
+    }
+
+    .page-layout {
+        width: 92%;
+        gap: 1rem;
+    }
+
+    .content-card,
+    .sidebar {
+        padding: 1rem;
+    }
+
+    .content-card h2,
+    .sidebar h2 {
+        font-size: 1.2rem;
+    }
+
+    .notice-item p,
+    .content-card > p {
+        font-size: 0.88rem;
+    }
+
+    .service-links {
+        flex-direction: column;
+    }
+
+    .service-links a {
+        width: 100%;
+    }
+
+    .contact-item p {
+        font-size: 1.15rem;
+    }
+}
